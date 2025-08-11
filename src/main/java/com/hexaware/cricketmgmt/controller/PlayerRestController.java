@@ -49,17 +49,11 @@ public class PlayerRestController {
         return service.deleteById(id);
     }
 
-   
+    @GetMapping("/totalmatches/{teamName}")
+    public Integer getTotalMatchesByTeam(@PathVariable String teamName) {
+        return service.getTotalMatchesByTeam(teamName);
+    }
 
-    
-    @GetMapping("/team/{teamName}")
-    public List<Player> getPlayersByTeam(@PathVariable String teamName) {
-        return service.getPlayersByTeam(teamName);
-    }
-    
-    @GetMapping("/totalMatches/{totalMatches}")
-    public List<Player> getByTotalMatchesGreaterThan(@PathVariable int totalMatches) {
-    	return service.getByTotalMatchesGreaterThan(totalMatches);
-    }
+   
 }
 

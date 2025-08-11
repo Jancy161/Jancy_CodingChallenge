@@ -77,18 +77,10 @@ public class PlayerServiceImp implements IPlayerService {
 
    
     @Override
-    public List<Player> getByTotalMatchesGreaterThan(int totalMatches) {
-        return repo.findByTotalMatchesGreaterThan(totalMatches);
+    public Integer getTotalMatchesByTeam(String teamName) {
+       
+        return repo.findTotalMatchesByTeam(teamName);
     }
-
-	
-
-	@Override
-	public List<Player> getPlayersByTeam(String teamName) {
-		
-		return repo.findByTeamName(teamName);
-	}
-
    
 }
 

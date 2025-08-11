@@ -11,7 +11,7 @@ public interface IPlayerService {
     Player getPlayerById(int id);
     Player updatePlayer(int id, PlayerDto dto);
     String deleteById(int id);
-    List<Player> getPlayersByTeam(String teamName);
-	List<Player> getByTotalMatchesGreaterThan(int totalMatches);
+    Integer getTotalMatchesByTeam(String teamName);
+
 	
 }

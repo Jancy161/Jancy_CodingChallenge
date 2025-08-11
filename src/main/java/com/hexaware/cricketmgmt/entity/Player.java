@@ -23,9 +23,9 @@ public class Player {
 
 	    private Integer jerseyNumber;
 
-	    @Enumerated(EnumType.STRING)
+	    //@Enumerated(EnumType.STRING)
 	   
-	    private Role role;
+	    private String role;
 
 	   
 	    private Integer totalMatches;
@@ -40,8 +40,8 @@ public class Player {
 	    private String description;
 	    
 	    
-	    public enum Role {
-	        Batsman, Bowler, Keeper, AllRounder
-	    }
+	   // public enum Role {
+	      //Batsman, Bowler, Keeper, AllRounder
+	  // }
 
 }

@@ -1,7 +1,7 @@
 package com.hexaware.cricketmgmt.dto;
 
 import com.hexaware.cricketmgmt.entity.Player;
-import com.hexaware.cricketmgmt.entity.Player.Role;
+//import com.hexaware.cricketmgmt.entity.Player.Role;
 import io.swagger.v3.oas.annotations.media.Schema;
 
 import jakarta.validation.constraints.Max;
@@ -28,11 +28,11 @@ public class PlayerDto {
     private Integer jerseyNumber;
 	 
 	 @NotNull
-	    @Schema(implementation = Role.class, description = "Batsman, Bowler, Keeper, AllRounder")
-	    private Role role;
+	 @Pattern(regexp = "Batsman|Bowler|Keeper|AllRounder", 
+     message = "Role must be one of: Batsman, Bowler, Keeper, AllRounder")
+	    private String role;
 
 	 @Min(1)
-	
     private Integer totalMatches;
 	 
 	 @Pattern(regexp ="[A-Z]{1,15}[a-z]{1,15}")

@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 public class GlobalExceptionHandler {
 
 	@ExceptionHandler(PlayerNotFoundException.class)
-    public ResponseEntity<String> handleCarNotFound(PlayerNotFoundException ex) {
+    public ResponseEntity<String> handlePlayerNotFound(PlayerNotFoundException ex) {
         return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 }
