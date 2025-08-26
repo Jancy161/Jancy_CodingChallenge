@@ -32,7 +32,7 @@ public class PlayerDto {
      message = "Role must be one of: Batsman, Bowler, Keeper, AllRounder")
 	    private String role;
 
-	 @Min(1)
+	 
     private Integer totalMatches;
 	 
 	 @Pattern(regexp ="[A-Z]{1,15}[a-z]{1,15}")

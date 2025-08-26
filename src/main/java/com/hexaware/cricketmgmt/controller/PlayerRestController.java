@@ -4,14 +4,13 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.hexaware.cricketmgmt.dto.PlayerDto;
 import com.hexaware.cricketmgmt.entity.Player;
 import com.hexaware.cricketmgmt.service.IPlayerService;
 
 import jakarta.validation.Valid;
-
+@CrossOrigin(origins = "http://localhost:3000")
 @RestController
 @RequestMapping("/api/players")
 public class PlayerRestController {
@@ -26,13 +25,13 @@ public class PlayerRestController {
     }
 
   
-    @PutMapping("/{id}")
+    @PutMapping("/update/{id}")
     public Player updatePlayer(@PathVariable int id, @RequestBody @Valid PlayerDto dto) {
         return service.updatePlayer(id, dto);
     }
 
     
-    @GetMapping("/{id}")
+    @GetMapping("/get/{id}")
     public Player getPlayerById(@PathVariable int id) {
         return service.getPlayerById(id);
     }
